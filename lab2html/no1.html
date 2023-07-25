@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.1</title>
+</head>
+<body>
+    <form>
+        <label>ชื่อเต็ม/ชื่อย่อสาขา</label>
+        <input
+        type="text"
+        name="ชื่อย่อสาขา"
+        placeholder="Cs/Computer Science"
+        pattern="[A-Z][a-z]"
+        >
+        <br>
+        <label>จำนวนเงินที่โอน</label>
+        <input type="number"
+        name="จำนวนเงินที่จะโอน"
+        placeholder="0.00"
+        >
+        <br>
+        <label for="fav food">อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย :</label>
+        <br>
+        <textarea 
+        name=""
+        cols="20"
+        rows="7"
+        name="Favorite Food"
+        placeholder=""
+        pattern="[A-Z][a-z]"
+        >
+        </textarea>
+        <br>
+        <label>ค่าไฟฟ้า3เดือนที่ผ่านมา</label>
+        <input type="number"
+        name="ค่าไฟฟ้า3เดือนที่ผ่านมา"
+        placeholder="0.00"
+        >
+        <br>
+        <label>รหัสบัตรประชาชน</label>
+        <input 
+        type="text"
+        name="รหัสบัตรประชาชน"
+        placeholder="x-xxxx-xxxxx-xx-x"
+        pattern="[\d]{1}[\-][\d]{4}[\-][\d]{5}[\-][\d]{2}[\-][\d]{1}"
+        >
+        <br>
+        <label>ความพึงพอใจต่อหนังสือเล่มนี้</label>
+        <br>
+        <input type="radio" name="good" value="ดีมาก" checked="checked">
+        <label>ดีมาก</label>
+        <input type="radio" name="good" value="ดี">
+        <label>ดี</label>
+        <input type="radio" name="good" value="ปานกลาง">
+        <label>ปานกลาง</label>
+        <input type="radio" name="good" value="แย่">
+        <label>แย่</label>
+        <input type="radio" name="good" value="แย่มาก">
+        <label>แย่มาก</label>
+        <br>
+        <label>อาการป่วย</label>
+        <br>
+        <textarea
+        name="อาการป่วย"
+        cols="20"
+        rows="7"
+        name="Favorite Food"
+        placeholder="อาการป่วย"
+        pattern="[A-Z][a-z][0-9]"
+        >
+        </textarea>
+        <br>
+        <label>ในช่วง3เดือนที่ผ่านมาเคยได้รับวัคซีนหรือไม่</label>
+        <br>
+        <input type="radio" name="have" value="ได้รับ">
+        <label>ได้รับ</label>
+        <input type="radio" name="have" value="ไม่ได้รับ">
+        <label>ไม่ได้รับ</label>
+        <br>
+        <label>รหัสผ่าน</label>
+        <input 
+        type="password" 
+        pattern="[A-Z][a-z][0-9]"
+        title="A-Z a-z 0-9"
+        >
+        <br>
+        <label>เวลาเริ่มเข้าเรียน</label>
+        <input type="time">
+        <br>
+        <label>เวลาสิ้นสุดการเรียน</label>
+        <input type="time">
+        <br>
+        <label>วันเวลาที่ต้องพบแพทย์</label>
+        <input 
+        type="datetime-local"
+        name="เวลาที่ต้องพบแพทย์">
+        <br>
+        <button >Submit</button>
+    </form>
+</body>
+</html>

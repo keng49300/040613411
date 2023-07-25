@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no.2</title>
+</head>
+
+<body>
+    <h2>แบบฟอร์มจองทัวร์</h2>
+    <form>
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            <label>ชื่อ-นามสกุล:</label><br>
+            <input type="text" name="name" placeholder="กรอกชื่อ-สกุล" pattern="[a-z][A-Z]" title="A-Z a-z" required>*
+            <br>
+            <label>Email:</label><br>
+            <input type="text" name="Email" required>*
+            <br>
+            <label>โทรศัพท์:</label><br>
+            <input type="tel" name="Tel" value="+66" required>*
+            <br>
+            <label>ที่อยู่:</label><br>
+            <textarea cols="20" rows="3"></textarea>
+            <br>
+            <label>รหัสไปรษณีย์:</label>
+            <input type="text" size="5" pattern="[\d]{5}" title="Zipcode Only ">
+            <br>
+            <label>รูปผู้จอง:</label>
+            <input type="file" name="image" accept="image/png, image/jpg" title="jpg or png">
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <label>Username:</label><br>
+            <input type="text" name="Username" pattern="[\w_]{8,}" title="A-Z a-z 0-9 more 8">
+            <br>
+            <label><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i></label><br>
+            <label>Password:</label><br>
+            <input type="password" name="Password" pattern="[\w]{8,}" title="A-Z a-z 0-9 more 8">
+            <br>
+            <label><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></label><br>
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label> แพคเก็จทัวร์:</label>
+            <select>
+                <option>อังกฤษ</option>
+                <option>ฝรั่งเศษ</option>
+                <option>เยอรมัน</option>
+            </select>
+            <br>
+            <label>วันที่เดินทาง:</label>
+            <input type="date" name="date">
+            <br>
+            <label>จำนวนผู้เดินทาง:</label>
+            <input type="text" size="2" name="SizeTrip" pattern="(1|2|3|4|5|6|7|8|9|10)" title="1-10 people">
+            <br>
+            <label>เน้นการท่องเที่ยวแบบใด?</label>
+            <br>
+            <input type="checkbox" name="TripType">
+            <label>ชอปปิ้ง</label>
+            <br>
+            <input type="checkbox" name="TripType">
+            <label>ธรรมชาติ</label>
+            <br>
+            <input type="checkbox" name="TripType">
+            <label>ทะเล</label>
+            <br>
+        </fieldset>
+        <label>ยอมรับเงื่อนไขแล้วข้อตกลง</label>
+        <input type="radio" checked="checked" name="Accept">
+        <label>I agree</label>
+        <input type="radio" name="Accept">
+        <label>I disagree</label>
+        
+        <button>จอง</button>
+    </form>
+</body>
+
+</html>
