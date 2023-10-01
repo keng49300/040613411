@@ -1,0 +1,11 @@
+1.SELECT * FROM student
+2.SELECT std_id,std_name FROM student
+3.SELECT * FROM student WHERE province LIKE "ขอนแก่น"
+4.SELECT * FROM register INNER JOIN course ON register.course_id=course.course_id WHERE std_id="5001100348";
+5.SELECT std_id,SUM(credit) FROM register INNER JOIN course ON register.course_id=course.course_id GROUP BY register.std_id;
+8.SELECT `name`,`ord_date`,SUM(item.quantity),SUM(product.price) FROM `orders` INNER JOIN `member` ON `orders`.`username`=`member`.`username`INNER JOIN item ON item.ord_id = orders.ord_id INNER JOIN product ON item.pid = product.pid GROUP BY ord_date;
+9.SELECT pname,SUM(quantity) FROM `item` INNER JOIN `product` ON `item`.`pid`=`product`.`pid` GROUP BY product.pid;
+10.SELECT pname,SUM(quantity) FROM `item` INNER JOIN `product` ON `item`.`pid`=`product`.`pid` GROUP BY product.pid;
+11.SELECT pname,SUM(quantity),price FROM `item` INNER JOIN `product` ON `item`.`pid`=`product`.`pid` GROUP BY product.pid;
+12.SELECT member.name, SUM(item.quantity), SUM(product.price) FROM member INNER JOIN orders ON member.username = orders.username INNER JOIN item ON orders.ord_id = item.ord_id INNER JOIN product ON item.pid = product.pid GROUP BY member.name;
+13.SELECT orders.ord_date, SUM(item.quantity), SUM(product.price) FROM orders INNER JOIN item ON orders.ord_id = item.ord_id INNER JOIN product ON item.pid = product.pid GROUP BY orders.ord_date;
